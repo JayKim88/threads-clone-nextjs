@@ -8,8 +8,6 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 
 async function Page({ params }: { params: { id: string } }) {
-  console.log("hey!", params.id);
-
   const user = await currentUser();
   if (!user) return null;
 
